@@ -3,16 +3,12 @@ version: "3.9"
 services:
   twb:
     image: pursuit4355/twb:latest
-    #build:
-    #  context: .
-    #  dockerfile: Dockerfile
     container_name: twb
     working_dir: /app
     user: "1000:1000"
     volumes:
       - ./config.json:/app/config.json:rw
       - ./templates:/app/templates:rw
-    # ggf. Ports:
     # ports:
     #   - "8000:8000"
     restart: unless-stopped
